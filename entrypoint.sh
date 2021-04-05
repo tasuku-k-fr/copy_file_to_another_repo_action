@@ -3,7 +3,7 @@
 set -e
 set -x
 
-if [ -z ${INPUT_SOURCE_FILE} ]
+if [ -z "$INPUT_SOURCE_FILE" ]
 then
   echo "Source file must be defined"
   return -1

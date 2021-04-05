@@ -9,7 +9,7 @@ then
   return -1
 fi
 
-if [ -z ${INPUT_DESTINATION_BRANCH} ]
+if [ -z "$INPUT_DESTINATION_BRANCH" ]
 then
   INPUT_DESTINATION_BRANCH=main
 fi

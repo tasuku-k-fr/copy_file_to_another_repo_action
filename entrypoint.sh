@@ -9,7 +9,7 @@ then
 fi
 
 
-if [ -z "$INPUT_SOURCE_FILE" ]
+if [ -z $INPUT_SOURCE_FILE ]
 then
   echo "Source file must be defined"
   return -1
@@ -28,9 +28,9 @@ git config --global user.email "$INPUT_USER_EMAIL"
 git config --global user.name "$INPUT_USER_NAME"
 git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-token:$API_TOKEN_GITHUB@github.com/$INPUT_DESTINATION_REPO.git" "$CLONE_DIR"
 
-echo "Copying contents to git repo"
+echo "Copying contents to git repo all file"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
-cp -R public/* "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
+cp -R $INPUT_SOURCE_FILE "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 cd "$CLONE_DIR"
 
 if [ ! -z "$INPUT_DESTINATION_BRANCH_CREATE" ]

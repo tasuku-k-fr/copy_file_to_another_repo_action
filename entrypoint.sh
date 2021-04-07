@@ -2,6 +2,7 @@
 
 set -e
 set -x
+set -f
 
 if [ "$INPUT_SOURCE_DIR_FILES" ]
 then

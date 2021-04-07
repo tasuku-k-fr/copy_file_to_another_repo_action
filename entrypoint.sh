@@ -3,6 +3,12 @@
 set -e
 set -x
 
+if [ "$INPUT_SOURCE_DIR_FILES" ]
+then
+  INPUT_SOURCE_FILE="$INPUT_SOURCE_DIR_FILES/*"
+fi
+
+
 if [ -z "$INPUT_SOURCE_FILE" ]
 then
   echo "Source file must be defined"

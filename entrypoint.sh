@@ -6,9 +6,9 @@ set -x
 if [ "$INPUT_SOURCE_DIR_FILES" ]
 then
   set -o noglob
-  INPUT_SOURCE_FILE=$INPUT_SOURCE_DIR_FILES/\*
-  set +o noglob
+  INPUT_SOURCE_FILE=$INPUT_SOURCE_DIR_FILES/*
   echo $INPUT_SOURCE_FILE
+  set +o noglob
 fi
 
 

@@ -30,7 +30,7 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 
 echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
-CP_COMMAND = "\"${INPUT_SOURCE_FILE}\" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
+CP_COMMAND="\"${INPUT_SOURCE_FILE}\" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
 eval "${CP_COMMAND}"
 cp -R $CP_COMMAND
 cd "$CLONE_DIR"

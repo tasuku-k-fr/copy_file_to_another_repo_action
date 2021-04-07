@@ -9,7 +9,7 @@ then
   INPUT_SOURCE_FILE=$INPUT_SOURCE_DIR_FILES/'*'
   set +o noglob
   eval 'echo $INPUT_SOURCE_FILE'
-  echo $INPUT_SOURCE_FILE
+  echo "$INPUT_SOURCE_FILE"
 fi
 
 

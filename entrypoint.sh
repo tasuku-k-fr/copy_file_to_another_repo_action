@@ -32,9 +32,10 @@ echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 # CP_TARGET="$INPUT_SOURCE_FILE "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
 # eval "cp -R \"${CP_TARGET}\""
+WILD_CARD=*
 set -o noglob
 cd sample
-eval "cp -R '*' "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
+eval "cp -R "$WILD_CARD" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
 set +o noglob
 cd "$CLONE_DIR"
 

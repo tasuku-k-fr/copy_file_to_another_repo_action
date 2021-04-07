@@ -34,7 +34,7 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 set -o noglob
-cp -R "$INPUT_SOURCE_DIR_FILES/'*'" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
+cp -R "$INPUT_SOURCE_DIR_FILES/*" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 set +o noglob
 cd "$CLONE_DIR"
 

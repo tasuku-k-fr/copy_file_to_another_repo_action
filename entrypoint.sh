@@ -6,9 +6,6 @@ set -x
 if [ "$INPUT_SOURCE_DIR_FILES" ]
 then
   INPUT_SOURCE_FILE="$INPUT_SOURCE_DIR_FILES/*"
-  set -o noglob
-  echo "$INPUT_SOURCE_FILE"
-  set +o noglob
 fi
 
 
@@ -33,8 +30,8 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 
 echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
-CP_TARGET="${INPUT_SOURCE_DIR_FILES}/'*' "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
-eval "cp -R ${CP_TARGET}"
+CP_TARGET="$INPUT_SOURCE_DIR_FILES/* "$CLONE_DIR/$INPUT_DESTINATION_FOLDER""
+eval "cp -R \"${CP_TARGET}\""
 cd "$CLONE_DIR"
 
 if [ ! -z "$INPUT_DESTINATION_BRANCH_CREATE" ]

@@ -24,7 +24,6 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 
 echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
-target_dir_name
 if [ "$INPUT_TARGET_DIR_NAME" ]
 then 
   mv $INPUT_SOURCE_FILE/ $INPUT_TARGET_DIR_NAME/

@@ -24,7 +24,7 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 # this line is remove command of gastbyjs build hash files.
 APP_ROOT_DIR=$CLONE_DIR/$INPUT_DESTINATION_FOLDER$INPUT_TARGET_DIR_NAME
 # REMOVE_FILES="$APP_ROOT_DIR/*.map $APP_ROOT_DIR/*.js $APP_ROOT_DIR/*.LICENSE.txt $APP_ROOT_DIR/*.css"
-rm -rf "$APP_ROOT_DIR/*"
+rm -rf $APP_ROOT_DIR
 
 echo "Copying contents to git repo all file escep"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER

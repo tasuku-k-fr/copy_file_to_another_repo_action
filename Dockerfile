@@ -1,4 +1,4 @@
-FROM alpine
+FROM slim
 
 RUN apk update && \
     apk upgrade && \
